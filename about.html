@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Revolution Saving Purse</title>
+  </head>
+    <style>
+      /* @media(min-width:480px) {
+        .mission{
+          text-align: center;
+          background-color: red;
+        }
+      } */
+ body, html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+ }
+
+
+body #bg {
+  background-color: #001333;
+  width: 100%;
+  height: 150vh;
+  position: absolute;
+  z-index: -1;
+}
+@media (min-width: 840px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+  }
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .nav-fill li a:hover {
+  border-bottom: 1px solid #110333;
+}
+body header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-transform: uppercase;
+}
+
+@media (min-width: 840px) {
+  main {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+  }
+}
+.mission {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  width: 50%;
+}
+main section#card {
+  border-right: #001333 4px solid;
+  background: #fff;
+  padding: 20px;
+  margin: 1em auto;
+  border-radius: 15px;
+  box-shadow: 0 0px 30px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+@media (min-width: 840px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-self: center;
+    margin: 1em;
+  }
+}
+main section#card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+main section#card ul li {
+  margin-bottom: 10px;
+  border-bottom: 4px solid #110333;
+}
+main section#card ul li span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #001333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main section#card ul li strong {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+main section#primary {
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+@media (min-width: 840px) {
+  main section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+main section#primary h1 {
+  font-size: 3em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+@media (min-width: 840px) {
+  main section#primary h1 {
+    width: 30%;
+    font-size: 4em;
+    line-height: 0.9em;
+  }
+}
+main section#primary p {
+  font-size: 1.4em;
+}
+main section#primary a {
+  color: #001333;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #FFF6BB;
+  display: block;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+}
+@media (min-width: 840px) {
+  main section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+  }
+}
+        #bk{
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+            background-color:#001333;
+            width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        text-align: center;
+        color: white;
+    
+        }
+    </style>
+    <title>About Us</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+          <a href="#" class="navbar-brand"> <img style="width: 50px;" src="/img/trade-logo.jpg" alt="">  The Revolution Saving Purse</a>
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link">About</a>
+                  <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+              <li class="nav-item">
+                <a href="#learn" class="nav-link">What You will trade</a>
+              </li>
+              <li class="nav-item">
+                <a href="#questions" class="nav-link">FAQ
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#instructors" class="nav-link">Boards</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div id="bk" >
+        <h1 class="mt-5">Who We are?</h1>
+    </div>
+    <main>
+        <section id="card">
+            <ul>
+                <li>
+                    <span></span>
+                    <strong>You want to save,dear?</strong>
+                </li>
+                <li>
+                    <span></span>
+                    <strong>savings.com is the best option</strong>
+                </li>
+                <li>
+                    <span></span>
+                    <strong>Thats unbelievable,right?,then try us now.</strong>
+                </li>
+            </ul>
+        </section>
+        <section id="primary" class="mt-5">
+            <h1 class="mt-5">Your Reliable Savings Purse</h1>
+            <p>Get help with your daily life savings.</p>
+
+            <a href="#" class="bg-warning" onclick="click(this.innerHTML='welcome yo!')">Get Started</a>
+        </section>
+    </main>
+    <!-- <div id="mainn">
+        <div class="register"> -->
+
+          <div class="mission text-center text-sm-start">
+            <div class="left">
+              <h1>Our Mission to the world</h1>
+            <p>we are poised to make your life a pleasant adventure, by helping [ you  save for the future</p>
+
+            <p>we have confortable hands and experts to take you through to your  journey of success in today's economy</p>
+            <p>we offer quality ,we dont compromise quality,we believe in you to be trading expert after our encounter</p>
+            <hr>
+            <div class="right">
+              <img src="/img/coin5.jpg" alt="" style="width: 120px;">
+              <h1>CEO</h1>
+              <P>EZE VICTOR, THE NEW SENSATION
+              </P>
+            </div>
+            </div>
+          </div>
+          
+
+ 
+
+     <!-- Footer -->
+     <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+          <p class="lead">Copyright &copy; 2022 The Revolution Saving Purse</p>
+  
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"></i>
+          </a>
+        </div>
+      </footer>
+      
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+  <script>
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.060982, 42.35725],
+      zoom: 18,
+    })
+  </script>
+</body>
+</html>
